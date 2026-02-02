@@ -2,4 +2,14 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'alexghergh/nvim-tmux-navigation',
+    config = function()
+      require('nvim-tmux-navigation').setup {
+        disable_when_zoomed = true, -- defaults to false
+      }
+    end,
+    lazy = false,
+  },
+}
